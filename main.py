@@ -643,7 +643,7 @@ class MainWindow(QMainWindow):
         self.file_tree.setColumnWidth(0, 200)
         self.file_tree.hideColumn(1)  # Size
         self.file_tree.hideColumn(2)  # Type
-        self.file_tree.doubleClicked.connect(self._on_file_double_clicked)
+        self.file_tree.clicked.connect(self._on_file_clicked)
         left_layout.addWidget(self.file_tree)
 
         splitter.addWidget(left_panel)
@@ -754,8 +754,8 @@ class MainWindow(QMainWindow):
         paste_shortcut = QShortcut(QKeySequence.Paste, self)
         paste_shortcut.activated.connect(self._paste_from_clipboard)
 
-    def _on_file_double_clicked(self, index):
-        """Handle file tree double-click."""
+    def _on_file_clicked(self, index):
+        """Handle file tree click."""
         path = self.file_model.filePath(index)
         if Path(path).is_file():
             if self.crop_widget.load_image(path):
