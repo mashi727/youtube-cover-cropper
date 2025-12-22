@@ -24,7 +24,7 @@ YouTube動画のカバー画像（サムネイル）を16:9比率で切り出し
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/youtube-cover-cropper.git
+git clone https://github.com/mashi727/youtube-cover-cropper.git
 cd youtube-cover-cropper
 
 # Install dependencies
