@@ -22,30 +22,47 @@ YouTube動画のカバー画像（サムネイル）を16:9比率で切り出し
 
 ## Installation
 
+### pip (推奨)
+
+```bash
+pip install git+https://github.com/mashi727/youtube-cover-cropper.git
+```
+
+### From source
+
 ```bash
 # Clone the repository
 git clone https://github.com/mashi727/youtube-cover-cropper.git
 cd youtube-cover-cropper
 
-# Install dependencies
-pip install -r requirements.txt
+# Install as package
+pip install .
+
+# Or install in development mode
+pip install -e .
 ```
 
 ## Usage
 
 ```bash
-# Basic usage
-python main.py
+# Run the app
+youtube-cover-cropper
 
 # Start with a specific directory
-python main.py /path/to/your/images
+youtube-cover-cropper /path/to/your/images
+```
+
+### As Python module
+
+```bash
+python -m youtube_cover_cropper [directory]
 ```
 
 ### Controls
 
 | Operation | Action |
 |-----------|--------|
-| ダブルクリック | 画像を読み込み |
+| クリック | 画像を読み込み |
 | ドラッグ | クロップ範囲を移動 |
 | コーナードラッグ | クロップ範囲をリサイズ |
 | Ctrl+V | クリップボードから貼り付け |
